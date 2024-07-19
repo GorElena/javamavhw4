@@ -18,5 +18,17 @@ public class StatisticsServiceTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    void findFromMax() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {3, 7, 9, 4, 5, 1, 9, 6, 15, 2, 1};
+        long expected = 15;
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
 
